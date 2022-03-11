@@ -45,11 +45,11 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 20,
+    borderTopWidth: 1,
+    borderColor: '#e0e0e0',
   },
   image: {
     height: 300,
-    borderBottomWidth: 1,
-    borderColor: '#e0e0e0',
   },
   chip: {
     marginRight: 10,

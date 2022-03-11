@@ -18,8 +18,6 @@ exports[`Organization screen matches snapshot 1`] = `
       }
       style={
         Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#e0e0e0",
           "height": 300,
         }
       }
@@ -28,6 +26,8 @@ exports[`Organization screen matches snapshot 1`] = `
     <View
       style={
         Object {
+          "borderColor": "#e0e0e0",
+          "borderTopWidth": 1,
           "padding": 20,
         }
       }
