@@ -16,6 +16,7 @@ import configFile from './auth.config';
 import {useSelector} from 'react-redux';
 
 import themeType from './app/types/theme';
+import OrganizationScreen from './app/screens/organization';
 
 LogBox.ignoreAllLogs(true);
 
@@ -83,6 +84,11 @@ const App: () => ReactNode = () => {
           <Stack.Screen
             name="Statement"
             component={Statement}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Organization"
+            component={OrganizationScreen}
             options={{headerShown: false}}
           />
         </Stack.Navigator>
