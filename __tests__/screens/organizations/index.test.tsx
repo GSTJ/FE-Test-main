@@ -1,13 +1,13 @@
 import React from 'react';
 
 import {fireEvent, render} from '@testing-library/react-native';
-import Organizations from '../../app/screens/organizations';
-import mockOrganizations from '../../__mocks__/organizations';
-import {ScreenNames} from '../../app/types/reactNavigation';
+import Organizations from '../../../app/screens/organizations';
+import mockOrganizations from '../../../__mocks__/organizations';
+import {ScreenNames} from '../../../app/types/reactNavigation';
 import {
   mockAxiosResultOnce,
   mockAxiosResult,
-} from '../../app/services/testUtils';
+} from '../../../app/services/testUtils';
 
 const mockNavigate = jest.fn();
 jest.mock('@react-navigation/native', () => ({

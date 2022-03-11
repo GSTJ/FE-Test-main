@@ -73,10 +73,6 @@ const Organizations = () => {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle={'light-content'} />
-      <Appbar.Header>
-        <Appbar.Content title="Organizations" subtitle={'Non-Profit'} />
-      </Appbar.Header>
       <Searchbar
         autoComplete="off"
         placeholder="Search organizations by name"
@@ -90,6 +86,7 @@ const Organizations = () => {
         contentContainerStyle={styles.organizationList}
         sections={filteredData ?? []}
         keyExtractor={({ein}) => String(ein)}
+        stickySectionHeadersEnabled
         renderSectionHeader={({section}) => (
           <View style={styles.sectionHeader}>
             <List.Section title={section.title}>{}</List.Section>

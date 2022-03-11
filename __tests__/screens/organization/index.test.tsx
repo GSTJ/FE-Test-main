@@ -1,16 +1,13 @@
 import React from 'react';
 
 import {render} from '@testing-library/react-native';
-import Organization from '../../app/screens/organization';
-import {makeOrganizationMock} from '../../__mocks__/organization';
+import Organization from '../../../app/screens/organization';
+import {makeOrganizationMock} from '../../../__mocks__/organization';
 
 const mockParams = makeOrganizationMock();
 
 jest.mock('@react-navigation/native', () => ({
   useRoute: () => ({params: mockParams}),
-  useNavigation: () => ({
-    goBack: jest.fn(),
-  }),
 }));
 
 describe('Organization screen', () => {

@@ -1,8 +1,8 @@
 import {
   makeSearchByProperty,
   makeSectionByProperty,
-} from '../../app/screens/organizations/utils';
-import mockOrganizations from '../../__mocks__/organizations';
+} from '../../../app/screens/organizations/utils';
+import mockOrganizations from '../../../__mocks__/organizations';
 
 describe('Utils', () => {
   describe('makeSectionByProperty', () => {

@@ -7,6 +7,7 @@ import ProfileScreen from './profile';
 import OrganizationsScreen from './organizations';
 import More from './more';
 import Statements from './statements';
+import CustomNavigationBar from '../components/customNavigationBar';
 
 const Tab = createBottomTabNavigator();
 
@@ -62,6 +63,8 @@ const Home = ({theme}) => {
         component={OrganizationsScreen}
         options={{
           title: 'Organizations',
+          headerShown: true,
+          header: props => <CustomNavigationBar {...props} />,
           tabBarIcon: () => (
             <MaterialCommunityIcons
               name="search-web"
