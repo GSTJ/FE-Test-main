@@ -5,10 +5,15 @@ import {Avatar, Title, Subheading} from 'react-native-paper';
 export const EmptyList = () => {
   return (
     <View testID="empty-message" style={styles.container}>
-      <Avatar.Icon icon="emoticon-sad" size={75} style={styles.icon} />
+      <Avatar.Icon
+        accessibilityRole="image"
+        icon="emoticon-sad"
+        size={75}
+        style={styles.icon}
+      />
       <View style={styles.content}>
-        <Title>This list is still empty! 😢</Title>
-        <Subheading style={styles.text}>
+        <Title accessibilityRole="header">This list is still empty! 😢</Title>
+        <Subheading accessibilityRole="text" style={styles.text}>
           Please try again later, we are working to serve you with it soon.
         </Subheading>
       </View>

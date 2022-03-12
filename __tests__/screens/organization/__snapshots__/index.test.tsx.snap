@@ -11,6 +11,7 @@ exports[`Organization screen matches snapshot 1`] = `
 >
   <View>
     <Image
+      accessibilityRole="image"
       source={
         Object {
           "uri": "https://www.example.com/logo.png",
@@ -33,6 +34,7 @@ exports[`Organization screen matches snapshot 1`] = `
       }
     >
       <Text
+        accessibilityRole="header"
         style={
           Array [
             Object {
@@ -110,6 +112,7 @@ exports[`Organization screen matches snapshot 1`] = `
             }
           >
             <View
+              accessibilityRole="text"
               collapsable={false}
               nativeID="animatedComponent"
               style={
@@ -216,6 +219,7 @@ exports[`Organization screen matches snapshot 1`] = `
         </View>
       </RCTScrollView>
       <Text
+        accessibilityRole="header"
         style={
           Array [
             Object {
@@ -252,6 +256,7 @@ exports[`Organization screen matches snapshot 1`] = `
         Description
       </Text>
       <Text
+        accessibilityRole="text"
         style={
           Array [
             Object {

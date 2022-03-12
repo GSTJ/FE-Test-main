@@ -38,6 +38,7 @@ exports[`Organization screen Back actions renders back icon correctly 1`] = `
     }
   >
     <View
+      accessibilityHint="Will navigate you to the previous page"
       accessibilityLabel="Back"
       accessibilityRole="button"
       accessibilityState={
@@ -164,6 +165,7 @@ exports[`Organization screen Back actions renders back icon correctly 1`] = `
       </View>
     </View>
     <View
+      accessibilityRole="header"
       accessibilityState={
         Object {
           "disabled": true,
@@ -284,6 +286,7 @@ exports[`Organization screen matches snapshot 1`] = `
       }
     />
     <View
+      accessibilityRole="header"
       accessibilityState={
         Object {
           "disabled": true,

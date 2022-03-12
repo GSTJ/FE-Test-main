@@ -15,11 +15,14 @@ const CustomNavigationBar = ({
     <Appbar.Header>
       {Boolean(props?.back) && (
         <Appbar.BackAction
+          accessibilityLabel="Back"
+          accessibilityRole="button"
+          accessibilityHint="Will navigate you to the previous page"
           testID="navigation-back-button"
           onPress={navigation.goBack}
         />
       )}
-      <Appbar.Content title={props.options.title} />
+      <Appbar.Content accessibilityRole="header" title={props.options.title} />
     </Appbar.Header>
   );
 };

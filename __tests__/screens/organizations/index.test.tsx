@@ -56,7 +56,7 @@ describe('Organizations screen', () => {
     expect(component).toMatchSnapshot();
   });
 
-  describe('handle request sucess', () => {
+  describe('handle request success', () => {
     beforeAll(() => {
       mockAxiosResult({data: mockOrganizations, loading: false, error: false});
     });

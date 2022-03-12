@@ -1,14 +1,7 @@
 import React, {useCallback, useMemo, useState} from 'react';
-import {
-  View,
-  StatusBar,
-  StyleSheet,
-  SectionList,
-  RefreshControl,
-} from 'react-native';
+import {View, StyleSheet, SectionList, RefreshControl} from 'react-native';
 import {
   Avatar,
-  Appbar,
   Searchbar,
   List,
   Divider,
@@ -60,6 +53,8 @@ const Organizations = () => {
       return (
         <ActivityIndicator
           testID="activity-indicator"
+          accessibilityLabel="Loading organizations"
+          accessibilityRole="progressbar"
           style={styles.activityIndicator}
         />
       );
@@ -75,6 +70,7 @@ const Organizations = () => {
     <View style={styles.container}>
       <Searchbar
         autoComplete="off"
+        accessibilityRole="search"
         placeholder="Search organizations by name"
         testID="organizations-searchbar"
         onChangeText={query => setSearchQuery(query)}
@@ -84,22 +80,34 @@ const Organizations = () => {
       />
       <SectionList
         contentContainerStyle={styles.organizationList}
+        accessibilityState={{busy: loading}}
         sections={filteredData ?? []}
         keyExtractor={({ein}) => String(ein)}
         stickySectionHeadersEnabled
         renderSectionHeader={({section}) => (
           <View style={styles.sectionHeader}>
-            <List.Section title={section.title}>{}</List.Section>
+            <List.Section accessibilityRole="header" title={section.title}>
+              {/* Needs a children prop in type checking */}
+            </List.Section>
           </View>
         )}
         renderItem={({item}) => (
           <List.Item
-            testID={`organization-list-item-${item.ein}`}
             onPress={() => navigation.navigate(ScreenNames.Organization, item)}
+            accessibilityLabel={item.name}
+            accessibilityRole="button"
+            accessibilityHint="Opens the organization details page"
+            testID={`organization-list-item-${item.ein}`}
             title={item.name}
             description={item.description}
             descriptionNumberOfLines={1}
-            left={props => <Avatar.Image source={{uri: item.uri}} {...props} />}
+            left={props => (
+              <Avatar.Image
+                accessibilityRole="image"
+                source={{uri: item.uri}}
+                {...props}
+              />
+            )}
           />
         )}
         ItemSeparatorComponent={() => <Divider inset />}

@@ -170,6 +170,11 @@ exports[`Organizations screen handle request status feedback renders error state
   </View>
   <RCTScrollView
     ListEmptyComponent={<Unknown />}
+    accessibilityState={
+      Object {
+        "busy": false,
+      }
+    }
     contentContainerStyle={
       Object {
         "paddingBottom": 150,
@@ -217,6 +222,7 @@ exports[`Organizations screen handle request status feedback renders error state
         testID="error-message"
       >
         <View
+          accessibilityRole="image"
           style={
             Array [
               Object {
@@ -244,6 +250,7 @@ exports[`Organizations screen handle request status feedback renders error state
           }
         >
           <Text
+            accessibilityRole="header"
             style={
               Array [
                 Object {
@@ -280,6 +287,7 @@ exports[`Organizations screen handle request status feedback renders error state
             Oops, something went wrong! 😱
           </Text>
           <Text
+            accessibilityRole="text"
             style={
               Array [
                 Object {
@@ -494,6 +502,11 @@ exports[`Organizations screen handle request status feedback renders loading sta
   </View>
   <RCTScrollView
     ListEmptyComponent={<Unknown />}
+    accessibilityState={
+      Object {
+        "busy": true,
+      }
+    }
     contentContainerStyle={
       Object {
         "paddingBottom": 150,
@@ -530,6 +543,7 @@ exports[`Organizations screen handle request status feedback renders loading sta
     <RCTRefreshControl />
     <View>
       <View
+        accessibilityLabel="Loading organizations"
         accessibilityRole="progressbar"
         accessibilityState={
           Object {
@@ -732,7 +746,7 @@ exports[`Organizations screen handle request status feedback renders loading sta
 </View>
 `;
 
-exports[`Organizations screen handle request sucess matches snapshot 1`] = `
+exports[`Organizations screen handle request success matches snapshot 1`] = `
 <View
   style={
     Object {
@@ -902,6 +916,11 @@ exports[`Organizations screen handle request sucess matches snapshot 1`] = `
   </View>
   <RCTScrollView
     ListEmptyComponent={<Unknown />}
+    accessibilityState={
+      Object {
+        "busy": false,
+      }
+    }
     contentContainerStyle={
       Object {
         "paddingBottom": 150,
@@ -1008,6 +1027,7 @@ exports[`Organizations screen handle request sucess matches snapshot 1`] = `
           }
         >
           <View
+            accessibilityRole="header"
             style={
               Array [
                 Object {
@@ -1095,6 +1115,9 @@ exports[`Organizations screen handle request sucess matches snapshot 1`] = `
       >
         <View>
           <View
+            accessibilityHint="Opens the organization details page"
+            accessibilityLabel="Animal Shelter"
+            accessibilityRole="button"
             accessibilityState={
               Object {
                 "disabled": false,
@@ -1130,6 +1153,7 @@ exports[`Organizations screen handle request sucess matches snapshot 1`] = `
               }
             >
               <View
+                accessibilityRole="image"
                 color="rgba(0, 0, 0, 0.54)"
                 style={
                   Array [
@@ -1253,6 +1277,9 @@ exports[`Organizations screen handle request sucess matches snapshot 1`] = `
         style={null}
       >
         <View
+          accessibilityHint="Opens the organization details page"
+          accessibilityLabel="Animal Rescue"
+          accessibilityRole="button"
           accessibilityState={
             Object {
               "disabled": false,
@@ -1288,6 +1315,7 @@ exports[`Organizations screen handle request sucess matches snapshot 1`] = `
             }
           >
             <View
+              accessibilityRole="image"
               color="rgba(0, 0, 0, 0.54)"
               style={
                 Array [
@@ -1407,6 +1435,7 @@ exports[`Organizations screen handle request sucess matches snapshot 1`] = `
           }
         >
           <View
+            accessibilityRole="header"
             style={
               Array [
                 Object {
@@ -1494,6 +1523,9 @@ exports[`Organizations screen handle request sucess matches snapshot 1`] = `
       >
         <View>
           <View
+            accessibilityHint="Opens the organization details page"
+            accessibilityLabel="Soccer Club"
+            accessibilityRole="button"
             accessibilityState={
               Object {
                 "disabled": false,
@@ -1529,6 +1561,7 @@ exports[`Organizations screen handle request sucess matches snapshot 1`] = `
               }
             >
               <View
+                accessibilityRole="image"
                 color="rgba(0, 0, 0, 0.54)"
                 style={
                   Array [
@@ -1652,6 +1685,9 @@ exports[`Organizations screen handle request sucess matches snapshot 1`] = `
         style={null}
       >
         <View
+          accessibilityHint="Opens the organization details page"
+          accessibilityLabel="Basketball Club"
+          accessibilityRole="button"
           accessibilityState={
             Object {
               "disabled": false,
@@ -1687,6 +1723,7 @@ exports[`Organizations screen handle request sucess matches snapshot 1`] = `
             }
           >
             <View
+              accessibilityRole="image"
               color="rgba(0, 0, 0, 0.54)"
               style={
                 Array [
@@ -1806,6 +1843,7 @@ exports[`Organizations screen handle request sucess matches snapshot 1`] = `
           }
         >
           <View
+            accessibilityRole="header"
             style={
               Array [
                 Object {
@@ -1892,6 +1930,9 @@ exports[`Organizations screen handle request sucess matches snapshot 1`] = `
         style={null}
       >
         <View
+          accessibilityHint="Opens the organization details page"
+          accessibilityLabel="Marine Rescue"
+          accessibilityRole="button"
           accessibilityState={
             Object {
               "disabled": false,
@@ -1927,6 +1968,7 @@ exports[`Organizations screen handle request sucess matches snapshot 1`] = `
             }
           >
             <View
+              accessibilityRole="image"
               color="rgba(0, 0, 0, 0.54)"
               style={
                 Array [
@@ -2212,6 +2254,11 @@ exports[`Organizations screen renders empty organizations list state 1`] = `
   </View>
   <RCTScrollView
     ListEmptyComponent={<Unknown />}
+    accessibilityState={
+      Object {
+        "busy": false,
+      }
+    }
     contentContainerStyle={
       Object {
         "paddingBottom": 150,
@@ -2259,6 +2306,7 @@ exports[`Organizations screen renders empty organizations list state 1`] = `
         testID="empty-message"
       >
         <View
+          accessibilityRole="image"
           style={
             Array [
               Object {
@@ -2286,6 +2334,7 @@ exports[`Organizations screen renders empty organizations list state 1`] = `
           }
         >
           <Text
+            accessibilityRole="header"
             style={
               Array [
                 Object {
@@ -2322,6 +2371,7 @@ exports[`Organizations screen renders empty organizations list state 1`] = `
             This list is still empty! 😢
           </Text>
           <Text
+            accessibilityRole="text"
             style={
               Array [
                 Object {

@@ -16,24 +16,27 @@ const Organization = () => {
   return (
     <ScrollView style={styles.container} bounces={false}>
       <Image
+        accessibilityRole="image"
         testID="organization-logo"
         source={{uri: params.uri}}
         style={styles.image}
       />
       <View style={styles.content}>
-        <Title>Categories</Title>
+        <Title accessibilityRole="header">Categories</Title>
         <FlatList /* To showcase a possible use of multiple categories */
           data={[params.type]}
           bounces={false}
           horizontal
           showsHorizontalScrollIndicator={false}
           renderItem={({item: category}) => (
-            <Chip style={styles.chip}>{category}</Chip>
+            <Chip accessibilityRole="text" style={styles.chip}>
+              {category}
+            </Chip>
           )}
           keyExtractor={item => String(item)}
         />
-        <Title>Description</Title>
-        <Paragraph>{params.description}</Paragraph>
+        <Title accessibilityRole="header">Description</Title>
+        <Paragraph accessibilityRole="text">{params.description}</Paragraph>
       </View>
     </ScrollView>
   );
