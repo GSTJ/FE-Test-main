@@ -16,6 +16,8 @@ import configFile from './auth.config';
 import {useSelector} from 'react-redux';
 
 import themeType from './app/types/theme';
+import OrganizationScreen from './app/screens/organization';
+import CustomNavigationBar from './app/components/customNavigationBar';
 
 LogBox.ignoreAllLogs(true);
 
@@ -84,6 +86,14 @@ const App: () => ReactNode = () => {
             name="Statement"
             component={Statement}
             options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Organization"
+            component={OrganizationScreen}
+            options={({route}) => ({
+              header: props => <CustomNavigationBar {...props} />,
+              title: route.params.name,
+            })}
           />
         </Stack.Navigator>
       </PaperProvider>

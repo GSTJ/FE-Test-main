@@ -4,8 +4,10 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import {withTheme} from 'react-native-paper';
 import OverView from './overview';
 import ProfileScreen from './profile';
+import OrganizationsScreen from './organizations';
 import More from './more';
 import Statements from './statements';
+import CustomNavigationBar from '../components/customNavigationBar';
 
 const Tab = createBottomTabNavigator();
 
@@ -52,6 +54,24 @@ const Home = ({theme}) => {
           title: 'Profile',
           tabBarIcon: () => (
             <MaterialCommunityIcons name="account" color={'white'} size={30} />
+          ),
+          tabBarLabelStyle: {color: 'white'},
+        }}
+      />
+      <Tab.Screen
+        name="Organizations"
+        component={OrganizationsScreen}
+        options={{
+          title: 'Organizations',
+          headerShown: true,
+          tabBarTestID: 'organizations-tab-bar',
+          header: props => <CustomNavigationBar {...props} />,
+          tabBarIcon: () => (
+            <MaterialCommunityIcons
+              name="search-web"
+              color={'white'}
+              size={30}
+            />
           ),
           tabBarLabelStyle: {color: 'white'},
         }}

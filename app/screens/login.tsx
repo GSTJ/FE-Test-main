@@ -44,7 +44,7 @@ const LoginScreen = ({theme, navigation}) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View testID="login-screen" style={styles.container}>
       <StatusBar hidden />
       <Spinner
         visible={progress}
@@ -58,6 +58,7 @@ const LoginScreen = ({theme, navigation}) => {
         source={require('../assets/images/logo.png')}
       />
       <TextInput
+        testID="username-input"
         autoCapitalize="none"
         outlineColor={theme.colors.background}
         style={styles.input}
@@ -66,6 +67,7 @@ const LoginScreen = ({theme, navigation}) => {
         onChangeText={text => setUserName(text)}
       />
       <TextInput
+        testID="password-input"
         outlineColor={theme.colors.background}
         style={styles.input}
         secureTextEntry
@@ -75,7 +77,11 @@ const LoginScreen = ({theme, navigation}) => {
       />
       <Error error={error} />
       <View style={{flexDirection: 'row'}}>
-        <Button style={styles.button} mode="contained" onPress={login}>
+        <Button
+          testID="login-button"
+          style={styles.button}
+          mode="contained"
+          onPress={login}>
           Login
         </Button>
         <Button style={styles.button} mode="contained" onPress={reset}>
