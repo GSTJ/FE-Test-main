@@ -1,3 +1,10 @@
 # Windows files should use crlf line endings
 # https://help.github.com/articles/dealing-with-line-endings/
 *.bat text eol=crlf
+
+*.snap linguist-generated=true
+__snapshots__/ linguist-generated=true
+yarn.lock linguist-generated=true
+Podfile.lock linguist-generated=true
+project.pbxproj linguist-generated=true
+*.xcscheme linguist-generated=true
