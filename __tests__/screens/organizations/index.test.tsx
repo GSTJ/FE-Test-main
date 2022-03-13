@@ -65,6 +65,7 @@ describe('Organizations screen', () => {
       const component = render(<Organizations />);
       expect(component).toMatchSnapshot();
     });
+
     it('renders all organizations', () => {
       const component = render(<Organizations />);
 
@@ -127,6 +128,16 @@ describe('Organizations screen', () => {
         expect(
           component.getAllByTestId(/organization-list-item-.*/),
         ).toHaveLength(mockOrganizations.length);
+      });
+
+      it('should show empty message when no organization is found', () => {
+        const component = render(<Organizations />);
+
+        const searchInput = component.getByTestId('organizations-searchbar');
+
+        fireEvent.changeText(searchInput, 'fake-name-that-should-not-exist');
+
+        expect(component.queryByTestId('empty-message')).toBeTruthy();
       });
     });
   });

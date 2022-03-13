@@ -12,9 +12,9 @@ export const EmptyList = () => {
         style={styles.icon}
       />
       <View style={styles.content}>
-        <Title accessibilityRole="header">This list is still empty! 😢</Title>
+        <Title accessibilityRole="header">No organizations found! 😢</Title>
         <Subheading accessibilityRole="text" style={styles.text}>
-          Please try again later, we are working to serve you with it soon.
+          We are working to serve you with more soon.
         </Subheading>
       </View>
     </View>

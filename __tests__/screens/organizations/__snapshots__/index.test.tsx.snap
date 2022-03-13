@@ -2368,7 +2368,7 @@ exports[`Organizations screen renders empty organizations list state 1`] = `
               ]
             }
           >
-            This list is still empty! 😢
+            No organizations found! 😢
           </Text>
           <Text
             accessibilityRole="text"
@@ -2407,7 +2407,7 @@ exports[`Organizations screen renders empty organizations list state 1`] = `
               ]
             }
           >
-            Please try again later, we are working to serve you with it soon.
+            We are working to serve you with more soon.
           </Text>
         </View>
       </View>
