@@ -64,6 +64,7 @@ const Home = ({theme}) => {
         options={{
           title: 'Organizations',
           headerShown: true,
+          tabBarTestID: 'organizations-tab-bar',
           header: props => <CustomNavigationBar {...props} />,
           tabBarIcon: () => (
             <MaterialCommunityIcons

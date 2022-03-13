@@ -14,7 +14,10 @@ const Organization = () => {
   const {params} = useRoute<OrganizationScreenRouteProp>();
 
   return (
-    <ScrollView style={styles.container} bounces={false}>
+    <ScrollView
+      testID="organization-screen"
+      style={styles.container}
+      bounces={false}>
       <Image
         accessibilityRole="image"
         testID="organization-logo"

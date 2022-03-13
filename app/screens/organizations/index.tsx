@@ -68,7 +68,7 @@ const Organizations = () => {
   }, [loading, error]);
 
   return (
-    <View style={styles.container}>
+    <View testID="organizations-screen" style={styles.container}>
       {Boolean(data?.length) && (
         <Searchbar
           autoComplete="off"
