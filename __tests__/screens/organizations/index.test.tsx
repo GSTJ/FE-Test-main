@@ -130,14 +130,17 @@ describe('Organizations screen', () => {
         ).toHaveLength(mockOrganizations.length);
       });
 
-      it('should show empty message when no organization is found', () => {
+      it('should correctly show empty message when no organization is found', () => {
         const component = render(<Organizations />);
 
         const searchInput = component.getByTestId('organizations-searchbar');
 
         fireEvent.changeText(searchInput, 'fake-name-that-should-not-exist');
 
+        expect(component.queryByTestId('organizations-searchbar')).toBeTruthy(); // Shouldn't disappear after an invalid search
         expect(component.queryByTestId('empty-message')).toBeTruthy();
+
+        expect(component).toMatchSnapshot();
       });
     });
   });

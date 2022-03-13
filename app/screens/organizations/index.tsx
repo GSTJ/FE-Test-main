@@ -35,10 +35,11 @@ type OrganizationsScreenNavigationProp = NativeStackNavigationProp<
 
 const Organizations = () => {
   const {colors} = useTheme();
+  const [searchQuery, setSearchQuery] = useState('');
+
   const [{data, loading, error}, refetch] = useAxios<IOrganization[]>(
     'https://gs.npkn.net/npo',
   );
-  const [searchQuery, setSearchQuery] = useState('');
 
   const navigation = useNavigation<OrganizationsScreenNavigationProp>();
 
@@ -68,16 +69,18 @@ const Organizations = () => {
 
   return (
     <View style={styles.container}>
-      <Searchbar
-        autoComplete="off"
-        accessibilityRole="search"
-        placeholder="Search organizations by name"
-        testID="organizations-searchbar"
-        onChangeText={query => setSearchQuery(query)}
-        value={searchQuery}
-        style={styles.searchbar}
-        inputStyle={styles.searchbarInput}
-      />
+      {Boolean(data?.length) && (
+        <Searchbar
+          autoComplete="off"
+          accessibilityRole="search"
+          placeholder="Search organizations by name"
+          testID="organizations-searchbar"
+          onChangeText={query => setSearchQuery(query)}
+          value={searchQuery}
+          style={styles.searchbar}
+          inputStyle={styles.searchbarInput}
+        />
+      )}
       <SectionList
         contentContainerStyle={styles.organizationList}
         accessibilityState={{busy: loading}}
