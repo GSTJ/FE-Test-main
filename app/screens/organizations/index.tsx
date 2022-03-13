@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     paddingBottom: 150,
   },
   activityIndicator: {
-    marginTop: 25,
+    marginTop: 50,
   },
 });
 

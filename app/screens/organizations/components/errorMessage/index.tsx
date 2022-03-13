@@ -24,7 +24,8 @@ export const ErrorMessage = () => {
 
 const styles = StyleSheet.create({
   container: {
-    margin: 20,
+    marginHorizontal: 20,
+    marginVertical: 50,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
